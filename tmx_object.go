@@ -25,6 +25,7 @@ package tiled
 import (
 	"encoding/xml"
 	"errors"
+	"path"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -168,7 +169,7 @@ func (o *Object) initTemplate(m *Map) error {
 	}
 	if src := o.Template.Tileset.Source; len(src) > 0 {
 		// The tileset source may be relative from the template location.
-		o.Template.Tileset.Source = filepath.Join(filepath.Dir(o.TemplateSource), src)
+		o.Template.Tileset.Source = path.Join(filepath.Dir(o.TemplateSource), src)
 	}
 	return m.initTileset(o.Template.Tileset)
 }

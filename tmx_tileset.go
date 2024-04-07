@@ -3,6 +3,7 @@ package tiled
 import (
 	"errors"
 	"image"
+	"path"
 	"path/filepath"
 )
 
@@ -66,7 +67,8 @@ func (ts *Tileset) SetBaseDir(baseDir string) {
 
 // GetFileFullPath returns path to file relative to tileset file
 func (ts *Tileset) GetFileFullPath(fileName string) string {
-	return filepath.Join(ts.baseDir, fileName)
+	p := path.Join(filepath.FromSlash(ts.baseDir), filepath.Join(fileName))
+	return p
 }
 
 // TilesetTileOffset is used to specify an offset in pixels, to be applied when drawing a tile from the related tileset. When not present, no offset is applied
