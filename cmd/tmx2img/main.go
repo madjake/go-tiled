@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/lafriks/go-tiled"
-	"github.com/lafriks/go-tiled/render"
+	"github.com/madjake/go-tiled"
+	"github.com/madjake/go-tiled/render"
 )
 
 func main() {

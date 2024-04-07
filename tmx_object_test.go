@@ -8,7 +8,7 @@ package tiled_test
 import (
 	"testing"
 
-	"github.com/lafriks/go-tiled"
+	"github.com/madjake/go-tiled"
 )
 
 func TestLoadTilesetReferencedOnlyByObjectGroup(t *testing.T) {

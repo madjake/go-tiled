@@ -35,7 +35,7 @@ import (
 	"os"
 
 	"github.com/disintegration/imaging"
-	"github.com/lafriks/go-tiled"
+	"github.com/madjake/go-tiled"
 )
 
 var (
