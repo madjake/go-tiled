@@ -69,7 +69,7 @@ func (l *loader) open(name string) (fs.File, error) {
 	if l == nil || l.FileSystem == nil {
 		return os.Open(name)
 	}
-	return l.FileSystem.Open(name)
+	return l.FileSystem.Open(filepath.ToSlash(name))
 }
 
 // WithFileSystem returns an option to load level from a passed filesystem

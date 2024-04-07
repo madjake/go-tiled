@@ -170,7 +170,7 @@ func (m *Map) TileGIDToTile(gid uint32) (*LayerTile, error) {
 
 // GetFileFullPath returns path to file relative to map file
 func (m *Map) GetFileFullPath(fileName string) string {
-	return filepath.Join(m.baseDir, fileName)
+	return filepath.FromSlash(filepath.Join(filepath.ToSlash(m.baseDir), filepath.ToSlash(fileName)))
 }
 
 // UnmarshalXML decodes a single XML element beginning with the given start element.
